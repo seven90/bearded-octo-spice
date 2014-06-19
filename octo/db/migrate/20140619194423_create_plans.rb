@@ -1,6 +1,6 @@
 class CreatePlans < ActiveRecord::Migration
   def change
-    create_table :plans do |t|
+    create_table :lessons do |t|
 
       t.integer :teacher_id
       t.date :date
