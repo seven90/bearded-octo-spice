@@ -1,2 +1,7 @@
 <h1>Welcome to my app!</h1>
-<p>Sign up here.</p>
+<% if user_signed_in? %>
+	<h2>You are Signed in.</h2>
+<% else %>
+	<p>Sign up <%= link_to'here', new_user_registration_path %>.</p>
+	<p><%= link_to 'Login', new_user_session_path %></p>
+<% end %>
