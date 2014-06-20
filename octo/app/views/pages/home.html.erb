@@ -1,6 +1,7 @@
 <h1>Welcome to my app!</h1>
 <% if user_signed_in? %>
 	<h2>You are Signed in.</h2>
+	<p><%= link_to "Log out", destroy_user_session_path, method: :delete %></p>
 <% else %>
 	<p>Sign up <%= link_to'here', new_user_registration_path %>.</p>
 	<p><%= link_to 'Login', new_user_session_path %></p>
